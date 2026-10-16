@@ -19,6 +19,8 @@ concurrency:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: ${{ github.workspace }}
     steps:
       - name: 📥 Clonar repositorio
         uses: actions/checkout@v4
