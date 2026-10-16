@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operaciones rápidas</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; font-family: Arial, sans-serif; color: #f8fafc; background: #111827; }
+    .panel { width: min(760px, 100%); padding: 48px; border: 1px solid #374151; border-radius: 24px; background: #1f2937; box-shadow: 0 25px 70px #030712; text-align: center; }
+    .mark { color: #a3e635; font-size: 2.5rem; font-weight: 900; }
+    h1 { margin: 10px 0; font-size: clamp(2rem, 5vw, 3.2rem); }
+    p { margin: 0 auto 32px; color: #cbd5e1; }
+    .choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    a { padding: 26px 18px; border-radius: 16px; color: #111827; text-decoration: none; font-weight: 800; transition: transform .2s, filter .2s; }
+    a:hover { transform: translateY(-5px); filter: brightness(1.08); }
+    .sum { background: #a3e635; } .sub { background: #fb923c; }
+    a span { display: block; margin-top: 8px; color: #374151; font-size: .85rem; font-weight: 400; }
+    @media (max-width: 560px) { .panel { padding: 32px 20px; } .choices { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main class="panel">
+    <div class="mark">01 / 02</div>
+    <h1>Operaciones rápidas</h1>
+    <p>Selecciona una herramienta para empezar a calcular.</p>
+    <div class="choices">
+      <a class="sum" href="./suma/"><strong>＋ Suma</strong><span>Combina dos números</span></a>
+      <a class="sub" href="./resta/"><strong>− Resta</strong><span>Encuentra la diferencia</span></a>
+    </div>
+  </main>
+</body>
+</html>

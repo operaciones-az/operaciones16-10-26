@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resta | Operaciones rápidas</title>
+  <style>
+    * { box-sizing: border-box; } body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 20px; font-family: Arial, sans-serif; background: #fff7ed; color: #431407; }
+    .card { width: min(430px, 100%); padding: 34px; border-radius: 22px; background: #ffedd5; box-shadow: 0 18px 45px #ea580c55; } h1 { margin: 0 0 8px; } p { color: #9a3412; }
+    label { display: block; margin: 18px 0 6px; font-size: .8rem; font-weight: 700; text-transform: uppercase; } input { width: 100%; padding: 13px; border: 2px solid #fdba74; border-radius: 10px; font-size: 1rem; }
+    button, .back { display: block; width: 100%; margin-top: 20px; padding: 13px; border: 0; border-radius: 10px; text-align: center; font-weight: 800; cursor: pointer; text-decoration: none; } button { color: #fff; background: #ea580c; } .back { color: #7c2d12; background: #fed7aa; }
+    #resultado { margin-top: 18px; padding: 14px; border-radius: 10px; background: #fed7aa; font-weight: 700; }
+  </style>
+</head>
+<body><main class="card"><h1>− Resta</h1><p>Ingresa dos números y calcula la diferencia.</p>
+  <label for="num1">Primer número</label><input id="num1" type="number" step="any">
+  <label for="num2">Segundo número</label><input id="num2" type="number" step="any">
+  <button type="button" onclick="calcular()">Calcular resta</button><div id="resultado" hidden></div>
+  <a class="back" href="../">Volver al inicio</a>
+  <script>function calcular(){const a=Number(document.getElementById('num1').value),b=Number(document.getElementById('num2').value),r=document.getElementById('resultado');if(document.getElementById('num1').value===''||document.getElementById('num2').value===''){r.textContent='Ingresa los dos números.';}else{r.textContent='Resultado: '+(a-b);}r.hidden=false;}</script>
+</main></body>
+</html>
